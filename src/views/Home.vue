@@ -1,13 +1,15 @@
 <template>
-  <div class="home">
+  <section class="home">
     <header-bar/>
-    <hook-words/>
-    <search-bar/>
-  </div>
+    <section class="home-body">
+      <hook-words/>
+      <search-bar/>
+    </section>
+  </section>
 </template>
 
 <style lang="stylus">
-  .home
+  .home-body
     padding: 0 15vw
 </style>
 

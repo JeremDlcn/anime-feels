@@ -28,3 +28,23 @@ a {
     text-decoration: none;
     color: var(--main-font);
 }
+
+
+/* Responsive classes */
+@media (max-width: 650px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 885px) {
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media (min-width: 885px) {
+    .hide-desktop {
+        display: none;
+    }
+}
