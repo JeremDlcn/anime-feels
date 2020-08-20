@@ -1,21 +1,6 @@
 <script>
   export default  {
-    name: 'headerfeels',
-    props: [],
-    mounted () {
-
-      },
-    data () {
-      return {
-        
-        }
-    },
-    methods: {
-      
-      },
-    computed: {
-      
-      }
+    name: 'headerfeels'
   }
 </script>
 
