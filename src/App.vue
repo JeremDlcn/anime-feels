@@ -9,8 +9,9 @@
 </template>
 
 <style lang="stylus">
+tablet = 885px
 #app
-  font-family: Avenir,sans-serif
+  font-family: sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 </style>

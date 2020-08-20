@@ -8,13 +8,13 @@
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/header-feels.vue';
+import HeaderFeels from '@/components/header-feels.vue';
 import Searchbar from '@/components/search-bar-feels.vue';
 
 export default {
   name: 'Home',
   components: {
-    'header-bar': Header,
+    'header-bar': HeaderFeels,
     'search-bar': Searchbar
   }
 }

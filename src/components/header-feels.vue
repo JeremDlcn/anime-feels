@@ -1,6 +1,6 @@
 <script>
   export default  {
-    name: 'header',
+    name: 'headerfeels',
     props: [],
     mounted () {
 
@@ -22,14 +22,32 @@
 <template>
       <section class="head">
         <img src="../assets/logo.png" alt="logo" class="logo">
+        <h1>Feels</h1>
       </section>
 </template>
 
 <style scoped lang="stylus">
+@import "../assets/stylus/var.styl";
+
 .head
-  height: 20rem
+  height: 7rem
+  padding-top: 2rem
+  display: grid
+  grid-template-columns: 30% 1fr 30%
+  align-items: center
+  justify-items: center
 
 .logo
   width: 4rem
+  height: 4rem
   margin-left: 1.5rem
+  @media (min-width: tablet)
+    width 6rem
+    height: 6rem
+  
+h1
+  color: var(--primary)
+  font-size: 2.3rem
+  font-weight: bold
+
 </style>
