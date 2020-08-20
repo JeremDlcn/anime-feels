@@ -8,7 +8,7 @@
 </script>
 
 <template>
-
+  <input type="text">
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

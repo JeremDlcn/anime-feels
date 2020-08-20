@@ -1,17 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <header-bar/>
+    <search-bar/>
     <router-link to="/result">Vers le résultat</router-link>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import Header from '@/components/header-feels.vue';
+import Searchbar from '@/components/search-bar-feels.vue';
 
 export default {
   name: 'Home',
   components: {
+    'header-bar': Header,
+    'search-bar': Searchbar
   }
 }
 </script>

@@ -1,9 +1,3 @@
-<template>
-  <section class="image">
-  
-  </section>
-</template>
-
 <script>
   export default  {
     name: 'image',
@@ -24,6 +18,12 @@
     }
 }
 </script>
+
+<template>
+  <section class="image">
+  
+  </section>
+</template>
 
 <style scoped lang="stylus">
   .image {
