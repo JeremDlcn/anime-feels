@@ -14,4 +14,5 @@ tablet = 885px
   font-family: sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  padding-bottom: 2rem
 </style>

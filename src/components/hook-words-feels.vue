@@ -15,7 +15,9 @@
 @import "../assets/stylus/var.styl";
 
 .hook
-  margin-top: 5rem
+  margin-top: 3rem
+  @media (min-width: tablet)
+    margin-top: 5rem
 
 h1
   font-size: 2.4rem
