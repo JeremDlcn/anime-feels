@@ -65,7 +65,7 @@
 <style scoped lang="stylus">
   .predefined 
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
     gap: 2rem
     margin-top: 4rem
     div
@@ -73,7 +73,7 @@
       align-items: center
       justify-content: center
       background-color: rgb(162,162,162)
-      height: 8rem
+      height: 10rem
       background-position: center center
       background-size: cover
       border-radius: 10px
@@ -86,10 +86,11 @@
         right: 0px
         bottom: 0px
         border-radius: 10px
-        background-color: rgba(0,0,0,0.6)
+        background-color: rgba(0,0,0,0.5)
         z-index: 0
         
     &-title
       font-weight: bold
+      font-size: 1.3rem
       z-index: 1
 </style>

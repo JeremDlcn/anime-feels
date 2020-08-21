@@ -13,7 +13,7 @@
 <template>
   <section class="search">
     <div>
-      <input type="text" name="search-bar" class="search-bar" aria-label="champ de recherche">
+      <input type="text" name="search-bar" class="search-bar" placeholder="Ex:running exhaust" aria-label="champ de recherche">
       <p class="hide-tablet hide-mobile">Entrez le nom de l'anime ici</p>
     </div>
     <button class="search-button" aria-label="bouton de recherche">

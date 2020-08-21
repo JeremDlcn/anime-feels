@@ -2,8 +2,10 @@
   <section class="home">
     <header-bar/>
     <section class="home-body">
-      <hook-words/>
-      <search-bar/>
+      <div class="home-body-top">
+        <hook-words/>
+        <search-bar/>
+      </div>
       <predefined/>
     </section>
   </section>
@@ -12,6 +14,10 @@
 <style lang="stylus">
   .home-body
     padding: 0 15vw
+    &-top
+      max-width: 800px
+      margin: 0 auto
+
 </style>
 
 <script>
