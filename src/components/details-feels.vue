@@ -4,7 +4,7 @@
     <dialog class="details" open>
       <img :src="require(`@/assets/img/${src}`)" alt="">
       <p class="details-name">{{ name }}</p>
-      <b class="details-episode"></b>
+      <b class="details-episode" v-if="episode !== ''">Episode(s): {{ episode }}</b>
     </dialog>
   </section>
 </template>
@@ -40,6 +40,7 @@
     color inherit
     &-name
       font-size: 1.5rem
+      font-weight: bold
 
     & img
       width 100%
@@ -50,7 +51,7 @@
 <script>
   export default  {
     name: 'DetailsView',
-    props: ['name','src'],
+    props: ['name','src','episode'],
     mounted () {
 
     },

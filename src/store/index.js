@@ -40,6 +40,7 @@ export default new Vuex.Store({
       },
       {
         name: 'Concentratation',
+        episode: '4',
         src: '11.gif'
       },
                 {

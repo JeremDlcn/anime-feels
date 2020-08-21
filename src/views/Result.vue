@@ -3,7 +3,7 @@
     <header-bar/>
     <search-bar class="limit"/>
     <wall-container @clicked="reqDetails"/>
-    <details-view v-if="showDetails" @close="showDetails = false" :name="detailsName" :src="detailsSource"/>
+    <details-view v-if="showDetails" @close="showDetails = false" :name="detailsName" :src="detailsSource" :episode="detailsEp"/>
   </div>
 </template>
 
@@ -27,6 +27,7 @@ export default {
     return {
       detailsName: '',
       detailsSource: '',
+      detailsEp: '',
       showDetails: false
     }
   },
@@ -42,6 +43,7 @@ export default {
     reqDetails(value)  {
       this.detailsName = value.name;
       this.detailsSource = value.src;
+      this.detailsEp = value.episode;
       this.showDetails = true;
     }
   }
