@@ -1,4 +1,5 @@
 <script>
+import { mapState } from 'vuex';
   export default  {
     name: 'predefined',
     props: [],
@@ -7,48 +8,15 @@
       },
     data() {
       return {
-        categories: [
-          {
-            name: 'Happy',
-            src: '1.gif'
-          },
-          {
-            name: 'Irritated',
-            src: '2.gif'
-          },
-          {
-            name: 'Thinking',
-            src: '3.gif'
-          },
-          {
-            name: 'Chill',
-            src: '1.gif'
-          },
-          {
-            name: 'Shocked',
-            src: '2.gif'
-          },
-          {
-            name: 'Love',
-            src: '3.gif'
-          },
-          {
-            name: 'Blushing',
-            src: '1.gif'
-          },
-          {
-            name: 'Concentrate',
-            src: '2.gif'
-          }
-        ]
+
       }
     },
     methods: {
       
       },
     computed: {
-      
-      }
+      ...mapState(['categories'])
+    }
   }
 </script>
 
