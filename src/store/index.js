@@ -58,11 +58,11 @@ export default new Vuex.Store({
     categories: [
       {
         name: 'Happy',
-        src: '1.gif'
+        src: '9.gif'
       },
       {
         name: 'Irritated',
-        src: '2.gif'
+        src: '8.gif'
       },
       {
         name: 'Thinking',
@@ -70,23 +70,23 @@ export default new Vuex.Store({
       },
       {
         name: 'Chill',
-        src: '1.gif'
+        src: '20.gif'
       },
       {
         name: 'Shocked',
-        src: '2.gif'
+        src: '10.gif'
       },
       {
         name: 'Love',
-        src: '3.gif'
+        src: '18.gif'
       },
       {
         name: 'Blushing',
-        src: '1.gif'
+        src: '13.gif'
       },
       {
         name: 'Concentrate',
-        src: '2.gif'
+        src: '21.gif'
       }
     ]
   },

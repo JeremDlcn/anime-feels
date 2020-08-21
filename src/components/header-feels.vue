@@ -6,7 +6,9 @@
 
 <template>
       <section class="head">
-        <img src="../assets/logo.png" alt="logo" class="logo">
+        <router-link to="/">
+          <img src="../assets/logo.png" alt="logo" class="logo">
+        </router-link>
         <h1>Feels</h1>
       </section>
 </template>

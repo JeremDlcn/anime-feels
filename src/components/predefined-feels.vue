@@ -1,28 +1,6 @@
-<script>
-import { mapState } from 'vuex';
-  export default  {
-    name: 'predefined',
-    props: [],
-    mounted () {
-      
-      },
-    data() {
-      return {
-
-      }
-    },
-    methods: {
-      
-      },
-    computed: {
-      ...mapState(['categories'])
-    }
-  }
-</script>
-
 <template>
   <section class="predefined">
-    <div v-for="category of categories" :key="category" :style="{ backgroundImage: 'url(' + require(`../assets/img/${category.src}`) + ')'}">
+    <div v-for="category of categories" :key="category.id" :style="{ backgroundImage: 'url(' + require(`../assets/img/${category.src}`) + ')'}">
       <p class="predefined-title">
         {{ category.name }}
       </p>
@@ -62,3 +40,25 @@ import { mapState } from 'vuex';
       font-size: 1.3rem
       z-index: 1
 </style>
+
+<script>
+import { mapState } from 'vuex';
+  export default  {
+    name: 'predefined',
+    props: [],
+    mounted () {
+      
+      },
+    data() {
+      return {
+
+      }
+    },
+    methods: {
+      
+      },
+    computed: {
+      ...mapState(['categories'])
+    }
+  }
+</script>
