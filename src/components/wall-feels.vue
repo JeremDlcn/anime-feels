@@ -1,7 +1,7 @@
 <template>
   <section class="wall limit">
     <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container">
-      <img :src="require('../assets/' + source.src)" class="wall-images">
+      <img :src="require('../assets/img/' + source.src)" class="wall-images">
     </div>
   </section>
 </template>

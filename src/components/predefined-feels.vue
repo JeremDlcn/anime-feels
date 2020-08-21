@@ -54,7 +54,7 @@
 
 <template>
   <section class="predefined">
-    <div v-for="category of categories" :key="category" :style="{ backgroundImage: 'url(' + require(`../assets/${category.src}`) + ')'}">
+    <div v-for="category of categories" :key="category" :style="{ backgroundImage: 'url(' + require(`../assets/img/${category.src}`) + ')'}">
       <p class="predefined-title">
         {{ category.name }}
       </p>
