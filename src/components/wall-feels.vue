@@ -1,6 +1,6 @@
 <template>
   <section class="wall limit">
-    <div v-for="source of sources" :key="source" class="wall-container">
+    <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container">
       <img :src="require('../assets/' + source.src)" class="wall-images">
     </div>
   </section>
@@ -44,18 +44,12 @@
       &-container 
         width: 100%
         margin-bottom: 1rem
-        
-
-
 </style>
 
 <script>
   export default  {
     name: 'wall',
     props: [],
-    mounted () {
-
-    },
     data () {
       return {
         sources: [
@@ -95,7 +89,9 @@
       }
     },
     methods: {
-
+      showDetails: function (source) {
+        this.$emit('clicked', source)
+      }
     },
     computed: {
 

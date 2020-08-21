@@ -2,7 +2,8 @@
   <div class="result">
     <header-bar/>
     <search-bar class="limit"/>
-    <wall-container/>
+    <wall-container @clicked="reqDetails"/>
+    <details-view v-if="showDetails" @close="showDetails = false" :name="detailsName" :src="detailsSource"/>
   </div>
 </template>
 
@@ -17,14 +18,32 @@
 import HeaderFeels from '@/components/header-feels.vue';
 import Searchbar from '@/components/search-bar-feels.vue';
 import Wall from '@/components/wall-feels.vue';
+import DetailsView from '@/components/details-feels.vue';
 
 
 export default {
   name: 'Result',
+  data () {
+    return {
+      detailsName: '',
+      detailsSource: '',
+      showDetails: false
+    }
+  },
   components: {
     'header-bar': HeaderFeels,
     'search-bar': Searchbar,
-    'wall-container': Wall
+    'wall-container': Wall,
+    'details-view': DetailsView
+  },
+  computed: {
+  },
+  methods: {
+    reqDetails(value)  {
+      this.detailsName = value.name;
+      this.detailsSource = value.src;
+      this.showDetails = true;
+    }
   }
 }
 </script>
