@@ -2,7 +2,7 @@
   <section class="home">
     <header-bar/>
     <section class="home-body">
-      <div class="home-body-top">
+      <div class="limit">
         <hook-words/>
         <search-bar/>
       </div>
@@ -14,9 +14,11 @@
 <style lang="stylus">
   .home-body
     padding: 0 15vw
-    &-top
+
+  .limit
       max-width: 800px
       margin: 0 auto
+
 
 </style>
 
