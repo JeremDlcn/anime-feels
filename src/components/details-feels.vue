@@ -1,5 +1,4 @@
 <template>
-<!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
   <section class="details-root">
     <span class="backdrop" @click="close"></span>
     <dialog class="details" open>
@@ -13,8 +12,8 @@
           <img :src="require('@/assets/download.svg')" alt="" class="download"> Download
         </button>
         <p class="details-actions-taglabel">Tags:</p>
-        <div class="details-actions-tags">
-          <li v-for="tag in tags" :key="tag.id" v-if="tags !== ''" class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
+        <div class="details-actions-tags" v-if="tags !== ''">
+          <li v-for="tag in tags" :key="tag.id"  class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
         </div>
       </section>
     </dialog>
