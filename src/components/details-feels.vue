@@ -8,9 +8,11 @@
         <b class="details-episode" v-if="episode !== ''"><span class="no-bold">Episode(s): </span>{{ episode }}</b>
       </section>
       <section class="details-actions">
-        <button class="details-actions-download">
-          <img :src="require('@/assets/download.svg')" alt="" class="download"> Download
-        </button>
+        <a :href="require(`@/assets/img/${src}`)" :download="name">
+          <button class="details-actions-download">
+            <img :src="require('@/assets/download.svg')" alt="" class="download"> Download
+          </button>
+        </a>
         <p class="details-actions-taglabel">Tags:</p>
         <div class="details-actions-tags" v-if="tags !== ''">
           <li v-for="tag in tags" :key="tag.id"  class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
