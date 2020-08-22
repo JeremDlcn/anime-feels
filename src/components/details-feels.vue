@@ -1,11 +1,16 @@
 <template>
   <section class="details-root">
+    <div class="close" @click="close">❌</div>
     <span class="backdrop" @click="close"></span>
     <dialog class="details" open>
       <section class="details-main">
         <img :src="require(`@/assets/img/${src}`)" alt="" loading="lazy">
         <p class="details-name">{{ name }}</p>
         <b class="details-episode" v-if="episode !== ''"><span class="no-bold">Episode(s): </span>{{ episode }}</b>
+        <p class="details-actions-taglabel">Tags:</p>
+        <div class="details-actions-tags" v-if="tags !== ''">
+          <li v-for="tag in tags" :key="tag.id"  class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
+        </div>
       </section>
       <section class="details-actions">
         <a :href="require(`@/assets/img/${src}`)" :download="name">
@@ -13,10 +18,6 @@
             <img :src="require('@/assets/download.svg')" alt="" class="download"> Download
           </button>
         </a>
-        <p class="details-actions-taglabel">Tags:</p>
-        <div class="details-actions-tags" v-if="tags !== ''">
-          <li v-for="tag in tags" :key="tag.id"  class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
-        </div>
       </section>
     </dialog>
   </section>
@@ -43,6 +44,7 @@
 
   .backdrop
     background-color: rgba(0,0,0,0.6)
+    cursor: pointer
 
   .details
     background-color: transparent
@@ -50,8 +52,8 @@
     position: relative
     left: 4rem
     z-index: 1
-    width: 70vw
-    max-width: 600px
+    width: 57vw
+    max-width: 800px
     border-radius 10px
     color inherit
     display: flex
@@ -70,7 +72,7 @@
       border-radius 10px
     &-actions
       margin-top: 1rem
-      width: 300px
+      width: 280px
       @media (min-width: tablet)
         margin-left: 2rem
       &-download
@@ -81,10 +83,9 @@
         padding: 0.7rem 1rem  
         border: none
         border-radius: 5px
-        margin-bottom: 2rem
         cursor: pointer
       &-taglabel
-        margin-bottom: 0.5rem
+        margin: 0.5rem 0
       &-tags
         display: flex
         flex-wrap: wrap
@@ -96,6 +97,8 @@
     margin-right: 0.5rem
     margin-bottom: 0.5rem
     border-radius: 5px
+    font-size: 0.8rem
+    font-weight: 600
 
   .download
     width 1.2rem
@@ -105,6 +108,15 @@
 
   .no-bold
     font-weight: normal
+
+  .close
+    filter: contrast(2%) grayscale(1) brightness(3)
+    font-size: 1.5rem
+    z-index: 5
+    position: fixed
+    top: 2rem
+    right: 2rem
+    cursor: pointer
 </style>
 
 <script>
