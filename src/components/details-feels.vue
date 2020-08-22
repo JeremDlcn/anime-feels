@@ -22,6 +22,7 @@
 
 <style lang="stylus">
 @import "../assets/stylus/var.styl";
+
   .details-root,
   .backdrop
     position: fixed

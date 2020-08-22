@@ -38,7 +38,26 @@
         &:nth-child(3n)
           order: 3
 
-  @media (max-width: tablet)
+  @media (min-width: mobile) and (max-width: tablet)
+    .wall
+      align-content: space-between
+      height: 1800px
+      &::before,
+      &::after {
+        content: "";
+        flex-basis: 100%;
+        width: 0;
+        order: 2;
+      }      
+      &-container
+        width: 46%
+        margin-bottom: 2%
+        &:nth-child(2n+1)
+          order: 1
+        &:nth-child(2n)
+          order: 2
+
+  @media (max-width: mobile) 
     .wall
       align-items: center
       &-container 
