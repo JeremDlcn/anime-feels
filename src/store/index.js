@@ -7,54 +7,88 @@ export default new Vuex.Store({
   state: {
     sources: [
       {
-        name: 'Happy',
-        src: '1.gif'
+        name: 'Chika rap battle',
+        anime: 'Kaguya-sama: Love is War',
+        episode: '',
+        src: '1.gif',
+        tags: ['Chika','Rap','Dance','Kaguya-sama','Love is War','Kaguya-sama Love is War']
       },
       {
-        name: 'Irritated',
-        src: '2.gif'
+        name: 'Lonely Tamako',
+        anime: 'Tamako Love Story',
+        episode: '',
+        src: '2.gif',
+        tags: ['Alone','Tamako','Tamako Love Story','Quit']
       },
       {
-        name: 'Thinking',
-        src: '3.gif'
+        name: 'Jabami Yumeko pose',
+        anime: 'Gambling School',
+        episode: 'S1 - Opening',
+        src: '3.gif',
+        tags: ['Yumeko', 'Gambling School', 'Pose', 'Dance']
       },
       {
-        name: 'Chill',
-        src: '4.gif'
+        name: 'Violet Evergarden thinking',
+        anime: 'Violet Evergarden',
+        episode: '',
+        src: '4.gif',
+        tags: ['Violet','Evergarden','Violet Evergarden','Thinking','Wind','Hair']
       },
       {
-        name: 'Shocked',
-        src: '5.gif'
+        name: 'OK Makise Kurisu',
+        anime: 'Steins;Gate',
+        episode: '',
+        src: '5.gif',
+        tags: ['Steins','Gate','Steins Gate','Steins;Gate','Makise','Kurisu','OK','Confirmation','Go']
       },
       {
-        name: 'Love',
-        src: '16.gif'
+        name: 'Clone urahara kisuke Bleach',
+        anime: 'Bleach',
+        episode: '',
+        src: '16.gif',
+        tags: ['Bleach','Kisuke','Urahara','Clone']
       },
       {
-        name: 'Blushing',
-        src: '12.gif'
+        name: 'Bored Phos',
+        anime: 'Land of the lustrous',
+        episode: '',
+        src: '12.gif',
+        tags: ['Land of the lustrous','Houseki no kuni','Sleep','Nap','Bored','Laid','Sleep in grass']
       },
       {
-        name: 'Concentrate',
-        src: '21.gif'
+        name: 'Excited Eru Chitanda',
+        anime: 'Hyouka',
+        episode: '',
+        src: '21.gif',
+        tags: ['Hyouka','Hyoka','Eru','Chitanda','Exited','Hype','Overactive']
       },
       {
-        name: 'Concentratation',
+        name: 'Clapping Pak',
+        anime: 'Re:Zero starting life in another world',
         episode: '4',
         src: '11.gif',
-        tags: ['Re:Zero','Pak','Clap','Bravo']
-      },
-                {
-        name: 'Bushing',
-        src: '18.gif'
+        tags: ['Re:Zero','Rezero','Re Zero','Pak','Clap','Bravo']
       },
       {
-        name: 'Cncentrate',
-        src: '10.gif'
+        name: 'Wind in hair Nao',
+        anime: 'Charlotte',
+        episode: '',
+        src: '18.gif',
+        tags: ['Charlotte','Nao','Tomori','Wind','Hair','Sunset']
       },
       {
-        name: 'Conc',
-        src: '19.gif'
+        name: 'Shocked Subaru',
+        anime: 'Re:Zero starting life in another world',
+        episode: '',
+        src: '10.gif',
+        tags: ['Subaru','Natsuki','Re:Zero','Rezero','Re Zero','Shock','Bed']
+      },
+      {
+        name: 'Misa threat Yu with fire',
+        anime: 'Charlotte',
+        episode: '',
+        src: '19.gif',
+        tags: ['Misa','Nishimori','Yu','Otosaka','Fire','Threat','Angry']
       }
     ],
     categories: [

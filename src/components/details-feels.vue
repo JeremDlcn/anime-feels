@@ -10,8 +10,9 @@
       </section>
       <section class="details-actions">
         <button class="details-actions-download">
-          <img :src="require('@/assets/download.svg')" alt="" class="download"> Télécharger l'image
+          <img :src="require('@/assets/download.svg')" alt="" class="download"> Download
         </button>
+        <p class="details-actions-taglabel">Tags:</p>
         <div class="details-actions-tags">
           <li v-for="tag in tags" :key="tag.id" v-if="tags !== ''" class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
         </div>
@@ -67,10 +68,10 @@
       height: auto
       border-radius 10px
     &-actions
-      margin-top: 2rem
+      margin-top: 1rem
+      width: 300px
       @media (min-width: tablet)
         margin-left: 2rem
-        width: 300px
       &-download
         background-color: var(--primary)
         color: var(--main-font)
@@ -81,6 +82,8 @@
         border-radius: 5px
         margin-bottom: 2rem
         cursor: pointer
+      &-taglabel
+        margin-bottom: 0.5rem
       &-tags
         display: flex
         flex-wrap: wrap
