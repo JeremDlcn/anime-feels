@@ -13,7 +13,7 @@
           <img :src="require('@/assets/download.svg')" alt="" class="download"> Télécharger l'image
         </button>
         <div class="details-actions-tags">
-          <li v-for="tag in tags" :key="tag.id" v-if="tags !== ''" class="tag">{{ tag }}</li>
+          <li v-for="tag in tags" :key="tag.id" v-if="tags !== ''" class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
         </div>
       </section>
     </dialog>
@@ -45,6 +45,7 @@
     background-color: transparent
     border: none
     position: relative
+    left: 4rem
     z-index: 1
     width: 70vw
     max-width: 600px
@@ -53,6 +54,7 @@
     display: flex
     @media (max-width: tablet)
       flex-direction: column
+      left: 0
     &-name
       font-size: 1.5rem
       font-weight: bold
@@ -77,11 +79,12 @@
         border: none
         border-radius: 5px
         margin-bottom: 2rem
+        cursor: pointer
       &-tags
         display: flex
         flex-wrap: wrap
   .tag
-    background-color: teal
+    background-color: gray
     list-style-type: none
     display: inline
     padding: 0.5rem 0.7rem
@@ -100,6 +103,8 @@
 </style>
 
 <script>
+import { mapState } from 'vuex';
+
   export default  {
     name: 'DetailsView',
     props: ['name','src','episode','tags'],
@@ -110,6 +115,9 @@
       return {
 
       }
+    },
+    computed: {
+      ...mapState(['colors'])
     },
     methods: {
       close() {
