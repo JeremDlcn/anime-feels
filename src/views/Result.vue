@@ -3,7 +3,7 @@
     <header-bar/>
     <search-bar class="limit"/>
     <wall-container @clicked="reqDetails"/>
-    <details-view v-if="showDetails" @close="showDetails = false" :name="detailsName" :src="detailsSource" :episode="detailsEp"/>
+    <details-view v-if="showDetails" @close="showDetails = false" :tags="detailsTags" :name="detailsName" :src="detailsSource" :episode="detailsEp"/>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
       detailsName: '',
       detailsSource: '',
       detailsEp: '',
+      detailsTags: [],
       showDetails: false
     }
   },
@@ -44,6 +45,7 @@ export default {
       this.detailsName = value.name;
       this.detailsSource = value.src;
       this.detailsEp = value.episode;
+      this.detailsTags = value.tags
       this.showDetails = true;
     }
   }
