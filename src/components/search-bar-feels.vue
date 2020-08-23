@@ -19,7 +19,7 @@
 <template>
   <section class="search">
     <div>
-      <input type="text" v-model="keywords"  name="search-bar" class="search-bar" placeholder="Ex:running exhaust" aria-label="champ de recherche">
+      <input type="text" v-model="keywords" @keyup.enter="()=>$router.push(`result?keywords=${keyTags}`)" name="search-bar" class="search-bar" placeholder="Ex:running exhaust" aria-label="champ de recherche">
       <p class="hide-tablet hide-mobile">Entrez le nom de l'anime ici</p>
     </div>
     <button class="search-button" aria-label="bouton de recherche" @click="()=>$router.push(`result?keywords=${keyTags}`)">

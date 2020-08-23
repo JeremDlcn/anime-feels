@@ -11,13 +11,12 @@ import { mapGetters } from 'vuex';
       }
     },
     created() {
-      console.log(this.params);
       this.sources = this.filterResults(this.params)
     },
     watch: {
       '$route.query.keywords': {
         handler: function(keywords) {
-          console.log(keywords);
+          this.sources = this.filterResults(keywords)
         },
         deep: true,
         immediate: true

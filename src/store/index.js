@@ -146,7 +146,6 @@ export default new Vuex.Store({
   },
   getters: {
     filterResults: (state) => (selector) => {
-      console.log(selector);
       return state.sources.filter(source => source.anime.toLowerCase() === selector.toLowerCase())
     }
   },
