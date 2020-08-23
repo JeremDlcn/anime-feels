@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+
 export default new Vuex.Store({
   state: {
     sources: [
@@ -88,7 +89,7 @@ export default new Vuex.Store({
         anime: 'Charlotte',
         episode: '',
         src: '19.gif',
-        tags: ['Misa','Nishimori','Yu','Otosaka','Fire','Threat','Angry']
+        tags: ['Misa','Nishimori','Yu','Otosaka','Fire','Threat','Angry','Charlotte']
       }
     ],
     categories: [
@@ -146,7 +147,18 @@ export default new Vuex.Store({
   },
   getters: {
     filterResults: (state) => (selector) => {
-      return state.sources.filter(source => source.anime.toLowerCase() === selector.toLowerCase())
+      let result = state.sources.reduce((acc, {tags, ...rest}) => {
+        tags = tags.filter(s => s.toLowerCase().includes(selector));
+        if(tags.length) acc.push({tags, ...rest});
+        return acc;
+     }, []);
+
+      // state.sources.forEach(element => {
+      //   element.tags = element.tags.filter(tag => tag.toLowerCase() === selector.toLowerCase());
+      // });
+      // let result = state.sources.filter(el => el.tags.length);
+      console.log(result)
+      return result
     }
   },
   actions: {

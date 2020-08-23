@@ -20,6 +20,7 @@
       justify-content: center
       background-color: rgb(162,162,162)
       height: 10rem
+      cursor: pointer
       background-position: center center
       background-size: cover
       border-radius: 10px
