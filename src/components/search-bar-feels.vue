@@ -4,7 +4,15 @@
     data() {
       return {
         desktop: false,
-        mobile: true
+        mobile: true,
+        keywords: ''
+      }
+    },
+    computed: {
+      keyTags() {
+         let hello = this.keywords.replace(' ','-');
+         console.log(hello);
+         return hello
       }
     }
   }
@@ -13,10 +21,10 @@
 <template>
   <section class="search">
     <div>
-      <input type="text" name="search-bar" class="search-bar" placeholder="Ex:running exhaust" aria-label="champ de recherche">
+      <input type="text" v-model="keywords"  name="search-bar" class="search-bar" placeholder="Ex:running exhaust" aria-label="champ de recherche">
       <p class="hide-tablet hide-mobile">Entrez le nom de l'anime ici</p>
     </div>
-    <button class="search-button" aria-label="bouton de recherche">
+    <button class="search-button" aria-label="bouton de recherche" @click="()=>$router.push(`result?keyword=${keyTags}`)">
       <p class="hide-desktop">Rechercher</p>
       <img src="@/assets/search.webp" class="search-icon" alt="recherche">
     </button>
