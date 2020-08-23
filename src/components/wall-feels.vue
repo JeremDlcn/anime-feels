@@ -14,6 +14,15 @@ import { mapGetters } from 'vuex';
       console.log(this.params);
       this.sources = this.filterResults(this.params)
     },
+    watch: {
+      '$route.query.keywords': {
+        handler: function(keywords) {
+          console.log(keywords);
+        },
+        deep: true,
+        immediate: true
+      }
+    },
     methods: {
       showDetails: function (source) {
         this.$emit('clicked', source)
