@@ -1,3 +1,30 @@
+<script>
+import { mapGetters } from 'vuex';
+
+  export default  {
+    name: 'wall',
+    props: [],
+    data () {
+      return {
+        sources: [],
+        params: this.$route.query.keywords
+      }
+    },
+    created() {
+      console.log(this.params);
+      this.sources = this.filterResults(this.params)
+    },
+    methods: {
+      showDetails: function (source) {
+        this.$emit('clicked', source)
+      }
+    },
+    computed: {
+      ...mapGetters(['filterResults'])
+    }
+  }
+</script>
+
 <template>
   <section class="wall limit">
     <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container">
@@ -64,25 +91,3 @@
         width: 100%
         margin-bottom: 1rem
 </style>
-
-<script>
-import { mapState } from 'vuex';
-
-  export default  {
-    name: 'wall',
-    props: [],
-    data () {
-      return {
-        
-      }
-    },
-    methods: {
-      showDetails: function (source) {
-        this.$emit('clicked', source)
-      }
-    },
-    computed: {
-      ...mapState(['sources'])
-    }
-  }
-</script>

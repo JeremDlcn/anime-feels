@@ -144,7 +144,11 @@ export default new Vuex.Store({
       '9ED1C8'
     ]
   },
-  mutations: {
+  getters: {
+    filterResults: (state) => (selector) => {
+      console.log(selector);
+      return state.sources.filter(source => source.anime.toLowerCase() === selector.toLowerCase())
+    }
   },
   actions: {
   },

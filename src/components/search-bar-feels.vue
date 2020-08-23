@@ -22,7 +22,7 @@
       <input type="text" v-model="keywords"  name="search-bar" class="search-bar" placeholder="Ex:running exhaust" aria-label="champ de recherche">
       <p class="hide-tablet hide-mobile">Entrez le nom de l'anime ici</p>
     </div>
-    <button class="search-button" aria-label="bouton de recherche" @click="()=>$router.push(`result?keyword=${keyTags}`)">
+    <button class="search-button" aria-label="bouton de recherche" @click="()=>$router.push(`result?keywords=${keyTags}`)">
       <p class="hide-desktop">Rechercher</p>
       <img src="@/assets/search.webp" class="search-icon" alt="recherche">
     </button>
