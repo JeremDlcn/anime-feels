@@ -10,9 +10,7 @@
     },
     computed: {
       keyTags() {
-         let hello = this.keywords.replace(' ','-');
-         console.log(hello);
-         return hello
+         return this.keywords.replace(/ /g,'-');
       }
     }
   }
