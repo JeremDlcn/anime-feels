@@ -33,7 +33,7 @@ export default new Vuex.Store({
         anime: 'Violet Evergarden',
         episode: '',
         src: '4.gif',
-        tags: ['Violet','Evergarden','Violet Evergarden','Thinking','Wind','Hair']
+        tags: ['Nao','Violet','Evergarden','Violet Evergarden','Thinking','Wind','Hair']
       },
       {
         name: 'OK Makise Kurisu',
@@ -151,13 +151,8 @@ export default new Vuex.Store({
         tags = tags.filter(s => s.toLowerCase().includes(selector));
         if(tags.length) acc.push({tags, ...rest});
         return acc;
-     }, []);
+       }, []);
 
-      // state.sources.forEach(element => {
-      //   element.tags = element.tags.filter(tag => tag.toLowerCase() === selector.toLowerCase());
-      // });
-      // let result = state.sources.filter(el => el.tags.length);
-      console.log(result)
       return result
     }
   },

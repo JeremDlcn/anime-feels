@@ -1,6 +1,7 @@
 <script>
 import { mapGetters } from 'vuex';
 
+
   export default  {
     name: 'wall',
     props: [],
@@ -15,8 +16,11 @@ import { mapGetters } from 'vuex';
     },
     watch: {
       '$route.query.keywords': {
-        handler: function(keywords) {
-          this.sources = this.filterResults(keywords)
+        handler: function(keyword) {
+          this.params = keyword;
+          this.sortKeywords().forEach(element => {
+            this.sources = this.filterResults(element)  
+          });
         },
         deep: true,
         immediate: true
@@ -25,6 +29,9 @@ import { mapGetters } from 'vuex';
     methods: {
       showDetails: function (source) {
         this.$emit('clicked', source)
+      },
+      sortKeywords: function () {
+        return this.params.split('-');
       }
     },
     computed: {
