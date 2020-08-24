@@ -50,7 +50,7 @@ import { mapGetters } from 'vuex';
 <template>
   <section :class="['wall', 'limit', { twocols: isTwo }]">
     <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container" >
-      <img :src="require('../assets/img/' + source.src)" class="wall-images">
+      <img :src="source.src" class="wall-images">
     </div>
   </section>
 </template>

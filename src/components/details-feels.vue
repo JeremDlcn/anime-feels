@@ -4,7 +4,7 @@
     <span class="backdrop" @click="close"></span>
     <dialog class="details" open>
       <section class="details-main">
-        <img :src="require(`@/assets/img/${src}`)" alt="" loading="lazy">
+        <img :src="src" alt="" loading="lazy">
         <p class="details-name">{{ name }}</p>
         <b class="details-episode" v-if="episode !== ''"><span class="no-bold">Episode(s): </span>{{ episode }}</b>
         <p class="details-actions-taglabel">Tags:</p>
@@ -13,7 +13,7 @@
         </div>
       </section>
       <section class="details-actions">
-        <a :href="require(`@/assets/img/${src}`)" :download="name">
+        <a :href="src" :download="name">
           <button class="details-actions-download">
             <img :src="require('@/assets/download.svg')" alt="" class="download"> Download
           </button>
