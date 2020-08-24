@@ -9,7 +9,7 @@
         <b class="details-episode" v-if="episode !== ''"><span class="no-bold">Episode(s): </span>{{ episode }}</b>
         <p class="details-actions-taglabel">Tags:</p>
         <div class="details-actions-tags" v-if="tags !== ''">
-          <li v-for="tag in tags" :key="tag.id"  class="tag"  :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
+          <li v-for="tag in tags" :key="tag.id"  class="tag" @click="()=>$router.push(`result?keywords=${tag}`)" :style="{ backgroundColor: colors[colors.length * Math.random() | 0]}">{{ tag }}</li>
         </div>
       </section>
       <section class="details-actions">
