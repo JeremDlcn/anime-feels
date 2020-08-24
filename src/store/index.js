@@ -17,7 +17,7 @@ export default new Vuex.Store({
       {
         name: 'Lonely Tamako',
         anime: 'Tamako Love Story',
-        episode: 'https://33.media.tumblr.com/3607cf079c604d5b67a6279c17e82641/tumblr_nhgiepVwSe1t89rpeo1_500.gif',
+        episode: 'https://steamuserimages-a.akamaihd.net/ugc/766022833894880068/43ABF050CA14DD3C71C150CF06449DC567DB10E3/',
         src: '',
         tags: ['Alone','Tamako','Tamako Love Story','Quit']
       },
@@ -52,7 +52,7 @@ export default new Vuex.Store({
       {
         name: 'Excited Eru Chitanda',
         anime: 'Hyouka',
-        episode: 'https://i.pinimg.com/originals/39/57/c9/3957c9bbd5576c0a9488d88b03745b20.gif',
+        episode: 'https://thumbs.gfycat.com/ZigzagRepentantCrocodileskink-size_restricted.gif',
         src: '',
         tags: ['Hyouka','Hyoka','Eru','Chitanda','Exited','Hype','Overactive']
       },
@@ -73,7 +73,7 @@ export default new Vuex.Store({
       {
         name: 'Shocked Subaru',
         anime: 'Re:Zero starting life in another world',
-        episode: 'https://giffiles.alphacoders.com/132/132786.gif',
+        episode: 'https://tenor.com/view/subaru-rem-re-zero-rezero-gif-5727666',
         src: '',
         tags: ['Subaru','Natsuki','Re:Zero','Rezero','Re Zero','Shock','Bed']
       },
