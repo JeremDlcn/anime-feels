@@ -26,21 +26,21 @@ export default new Vuex.Store({
         anime: 'Gambling School',
         episode: 'S1 - Opening',
         src: '3.gif',
-        tags: ['Yumeko', 'Gambling School', 'Pose', 'Dance']
+        tags: ['Charlotte','Yumeko', 'Gambling School', 'Pose', 'Dance']
       },
       {
         name: 'Violet Evergarden thinking',
         anime: 'Violet Evergarden',
         episode: '',
         src: '4.gif',
-        tags: ['Nao','Violet','Evergarden','Violet Evergarden','Thinking','Wind','Hair']
+        tags: ['Charlotte','Nao','Violet','Evergarden','Violet Evergarden','Thinking','Wind','Hair']
       },
       {
         name: 'OK Makise Kurisu',
         anime: 'Steins;Gate',
         episode: '',
         src: '5.gif',
-        tags: ['Steins','Gate','Steins Gate','Steins;Gate','Makise','Kurisu','OK','Confirmation','Go']
+        tags: ['Bleach','Steins','Gate','Steins Gate','Steins;Gate','Makise','Kurisu','OK','Confirmation','Go']
       },
       {
         name: 'Clone urahara kisuke Bleach',

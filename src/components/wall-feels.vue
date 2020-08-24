@@ -8,6 +8,7 @@ import { mapGetters } from 'vuex';
     data () {
       return {
         sources: [],
+        isTwo: false,
         params: this.$route.query.keywords
       }
     },
@@ -24,6 +25,12 @@ import { mapGetters } from 'vuex';
         },
         deep: true,
         immediate: true
+      },
+      'sources': {
+        handler: function(s) {
+          if (s.length == 2) this.isTwo = true ;
+          else this.isTwo = false;
+        }
       }
     },
     methods: {
@@ -41,8 +48,8 @@ import { mapGetters } from 'vuex';
 </script>
 
 <template>
-  <section class="wall limit">
-    <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container">
+  <section :class="['wall', 'limit', { twocols: isTwo }]">
+    <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container" >
       <img :src="require('../assets/img/' + source.src)" class="wall-images">
     </div>
   </section>
@@ -50,6 +57,8 @@ import { mapGetters } from 'vuex';
 
 <style scoped lang="stylus">
 @import "../assets/stylus/var.styl";
+  .twocols
+    display: block!important
   .wall
       display: flex
       flex-flow: column wrap
