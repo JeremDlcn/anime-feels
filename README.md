@@ -3,7 +3,7 @@
 
 
 
-![Page accueil](https://cloud-image-dlcn.netlify.com/anime-search/home.png)
+![Page accueil](https://cloud-image-dlcn.netlify.com/anime-search/anime-feels.png)
 
 Le lien vers le site [Anime Feels](https://anime-feels.herokuapp.com/).
 
