@@ -28,8 +28,11 @@ import { mapGetters } from 'vuex';
       },
       'sources': {
         handler: function(s) {
-          if (s.length == 2) this.isTwo = true ;
+          if (s.length == 2) this.isTwo = true;
           else this.isTwo = false;
+          let hei = (s.length / 3) * 200;
+          console.log(hei);
+          document.querySelector('.wall').style.height = hei + "px";
         }
       }
     },
@@ -49,7 +52,7 @@ import { mapGetters } from 'vuex';
 
 <template>
   <section :class="['wall', 'limit', { twocols: isTwo }]">
-    <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container" >
+    <div v-for="source of sources" @click="showDetails(source)" :key="source.name" class="wall-container">
       <img :src="source.src" class="wall-images">
     </div>
   </section>
