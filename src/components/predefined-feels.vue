@@ -1,6 +1,6 @@
 <template>
   <section class="predefined">
-    <div v-for="category of categories" :key="category.id" :style="{ backgroundImage: 'url(' + category.src + ')'}">
+    <div v-for="category of categories" :key="category.id" @click="()=>$router.push(`result?keywords=${category.name.toLowerCase()}`)" :style="{ backgroundImage: 'url(' + category.src + ')'}">
       <p class="predefined-title">
         {{ category.name }}
       </p>
