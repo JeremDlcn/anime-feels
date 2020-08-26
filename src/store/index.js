@@ -292,6 +292,12 @@ export default new Vuex.Store({
         episode: '',
         src: 'https://media1.tenor.com/images/308ad593feb9cfce5dff9b9d2e92b63b/tenor.gif?itemid=15157888',
         tags: ['Interest','Angel','Sparkle']
+      },{
+        name: 'Blushing Cinabre',
+        anime: 'Houseki no kuni',
+        episode: '',
+        src: 'https://image.myanimelist.net/ui/pVSqRUSLAi5R6rTwzZ0_EBDuluml45XIu-pdZtKYSli_uhK6v9gJOYkC0JwTsgHnnPZenWzbwRGUqBpyLpYvipWtASaCmFj_tAf6WjV4GZi7y2rUmSVWXfUaMtvqu526',
+        tags: ['Houseki','Kuni','Shinsha','Cinabre','Blushing']
       }
     ],
     categories: [

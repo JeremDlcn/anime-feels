@@ -4,11 +4,23 @@
     <search-bar class="limit"/>
     <wall-container @clicked="reqDetails"/>
     <details-view v-if="showDetails" v-scroll-lock="showDetails" @close="showDetails = false" :tags="detailsTags" :name="detailsName" :src="detailsSource" :episode="detailsEp"/>
+    <div class="deco"></div>
   </div>
 </template>
 
 <style lang="stylus">
 @import "../assets/stylus/var.styl";
+  .result
+    position:relative
+
+  .deco
+    background-color: var(--primary)
+    height: 2rem
+    width: 10rem
+    position: absolute
+    bottom 0
+    right 0
+
   @media (max-width: tablet)
     .result
       padding: 0 15vw

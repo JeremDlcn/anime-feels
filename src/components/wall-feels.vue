@@ -28,10 +28,19 @@ import { mapGetters } from 'vuex';
       },
       'sources': {
         handler: function(s) {
-          if (s.length == 2) this.isTwo = true;
-          else this.isTwo = false;
-          let hei = (s.length / 3) * 200;
-          console.log(hei);
+          let hei;
+          if (s.length == 2){
+            this.isTwo = true;
+            hei = (s.length / 3) * 350;
+          } 
+          if (s.length >= 8) {
+            this.isTwo = false;
+            hei = (s.length / 3) * 250;
+          }
+          else {
+            this.isTwo = false;
+            hei = (s.length / 3) * 350;
+          }
           document.querySelector('.wall').style.height = hei + "px";
         }
       }

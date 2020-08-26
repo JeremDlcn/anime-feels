@@ -28,7 +28,6 @@
   width: 4rem
   height: 4rem
   margin-left: 1.5rem
-  cursor: default
   @media (min-width: tablet)
     width 6rem
     height: 6rem
