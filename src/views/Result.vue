@@ -12,6 +12,7 @@
 @import "../assets/stylus/var.styl";
   .result
     position:relative
+    min-height 100vh
 
   .deco
     background-color: var(--primary)

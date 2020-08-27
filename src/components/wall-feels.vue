@@ -33,7 +33,7 @@ import { mapGetters } from 'vuex';
             this.isTwo = true;
             hei = (s.length / 3) * 350;
           } 
-          if (s.length >= 8) {
+          else if (s.length >= 8) {
             this.isTwo = false;
             hei = (s.length / 3) * 250;
           }
