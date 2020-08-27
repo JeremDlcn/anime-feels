@@ -356,8 +356,8 @@ export default new Vuex.Store({
   getters: {
     filterResults: (state) => (selector) => {
       let result = state.sources.reduce((acc, {tags, ...rest}) => {
-        tags = tags.filter(s => s.toLowerCase().includes(selector.toLowerCase()));
-        if(tags.length) acc.push({tags, ...rest});
+        let tag = tags.filter(s => s.toLowerCase().includes(selector.toLowerCase()));
+        if(tag.length) acc.push({tags, ...rest});
         return acc;
        }, []);
 

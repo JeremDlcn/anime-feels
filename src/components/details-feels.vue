@@ -15,7 +15,7 @@
       <section class="details-actions">
         <a :href="src" :download="name">
           <button class="details-actions-download">
-            <img :src="require('@/assets/download.svg')" alt="" class="download"> Download
+            <img :src="require('@/assets/download.svg')" alt="" class="download"> View source
           </button>
         </a>
       </section>
