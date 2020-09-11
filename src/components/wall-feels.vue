@@ -123,6 +123,7 @@ import { mapGetters } from 'vuex';
   @media (max-width: mobile) 
     .wall
       align-items: center
+      height: auto!important
       &-container 
         width: 100%
         margin-bottom: 1rem
